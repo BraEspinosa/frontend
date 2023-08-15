@@ -1,0 +1,23 @@
+stages:
+  - init
+  - despliegue
+
+hello_master:
+  stage: init
+  script:
+    - echo "Desplegando Cambios de Donde estoy registrado - Frontend"
+  only:
+    - master
+
+deploy_LOPCRCAPP02:
+  stage: despliegue
+  tags:
+      - LOPCRCAPP02
+  script:
+    - cd /var/www/frontend
+    - sudo git pull origin master
+    - sudo git status
+    - sudo chown -R nginx.nginx /var/www/frontend
+    - sudo systemctl status nginx
+  only:
+    - master
