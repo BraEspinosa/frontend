@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AppProvider } from './AppContext'; // Importa el AppProvider
+
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './css/design-system.css';
@@ -13,13 +15,15 @@ import NotFound from './components/NotFound';
 function App() {
   return (
     <Router>
-      <Header />
-        <Routes>
-          <Route path="/" Component={Principal} />
-          <Route path="/busqueda" Component={Formulario} />
-          <Route path="/resultado" Component={Tabla} />
-        </Routes>
-      <Footer />
+      <AppProvider>
+        <Header />
+          <Routes>
+            <Route path="/" Component={Principal} />
+            <Route path="/busqueda" Component={Formulario} />
+            <Route path="/resultado" Component={Tabla} />
+          </Routes>
+        <Footer />
+      </AppProvider>
     </Router>
 
     // <div className="App">

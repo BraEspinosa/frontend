@@ -1,6 +1,5 @@
-import React, { useState, useContext } from 'react';
+import React from 'react';
 import '../css/design-system.css';
-import { AppContext } from '../AppContext';
 
 const tdStyle = {
     width: '50%',
@@ -8,9 +7,6 @@ const tdStyle = {
 };
 
 const Tabla = () => {
-    const { state } = useContext(AppContext);
-    const { RcnData } = state;
-    console.log(RcnData);
 
     return (
         <div>
@@ -30,7 +26,7 @@ const Tabla = () => {
                                     <h6><strong>Número de Identificación (Nuip/Nip/Tarjeta de Identidad):</strong></h6>
                                 </td>
                                 <td>
-                                    <p>{RcnData[0].NIP}</p>
+                                    <p>123456789</p>
                                 </td>
                             </tr>
                             <tr>
@@ -38,7 +34,7 @@ const Tabla = () => {
                                     <h6><strong>Primer Apellido:</strong></h6>
                                 </td>
                                 <td className="" data-label="">
-                                    <p className="">{RcnData[0].APELLIDO1}</p>
+                                    <p className="">ORTEGA</p>
                                 </td>
                             </tr>
                             <tr>
@@ -46,7 +42,7 @@ const Tabla = () => {
                                     <p><strong>Segundo Apellido:</strong></p>
                                 </td>
                                 <td className="" data-label="">
-                                    <p className="">{RcnData[0].APELLIDO2}</p>
+                                    <p className="">FAJARDO</p>
                                 </td>
                             </tr>
                             <tr>
@@ -54,7 +50,7 @@ const Tabla = () => {
                                     <p><strong>Primer Nombre:</strong></p>
                                 </td>
                                 <td className="" data-label="">
-                                    <p className="">{RcnData[0].NOMBRE1}</p>
+                                    <p className="">GERSON</p>
                                 </td>
                             </tr>
                             <tr>
@@ -62,7 +58,7 @@ const Tabla = () => {
                                     <p><strong>Segundo Nombre:</strong></p>
                                 </td>
                                 <td className="" data-label="">
-                                    <p className="">{RcnData[0].NOMBRE2}</p>
+                                    <p className="">ENRIQUE</p>
                                 </td>
                             </tr>
                         </tbody>
@@ -80,7 +76,7 @@ const Tabla = () => {
                                     <p><strong>Serial del Registro Civil:</strong></p>
                                 </td>
                                 <td>
-                                    <p>{RcnData[0].SERIAL}</p>
+                                    <p>987654321</p>
                                 </td>
                             </tr>
                             <tr>
@@ -88,7 +84,7 @@ const Tabla = () => {
                                     <p><strong>Nuip/Nip/Tarjeta de Identidad:</strong></p>
                                 </td>
                                 <td className="" data-label="">
-                                    <p className="">{RcnData[0].NIP}</p>
+                                    <p className="">123456789</p>
                                 </td>
                             </tr>
                             <tr>
@@ -96,7 +92,7 @@ const Tabla = () => {
                                     <p><strong>Fecha de inscripcion (dd-mm-aaaa):</strong></p>
                                 </td>
                                 <td className="" data-label="">
-                                    <p className="">{RcnData[0].NACFECHA}</p>
+                                    <p className="">29 DE ABRIL DE 1981</p>
                                 </td>
                             </tr>
                             <tr>
@@ -104,7 +100,7 @@ const Tabla = () => {
                                     <p><strong>Oficina de Registro:</strong></p>
                                 </td>
                                 <td className="" data-label="">
-                                    <p className="">{RcnData[0].OFICINA}</p>
+                                    <p className="">NOTARIA 1 MONTERIA - CORDOBA</p>
                                 </td>
                             </tr>
                             <tr>
